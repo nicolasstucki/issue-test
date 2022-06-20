@@ -26,7 +26,7 @@ body:
     attributes:
       label: Describe the bug
       description: A clear and concise description of what the bug is.
-      placeholder: |
+      placeholder: "
         <!-- FILE OR FILES -->
         <!-- Include full source with imports -->
         <!-- Keep filename for reproduction -->
@@ -45,7 +45,7 @@ body:
         -->
 
         <!-- BACKWARDS COMPAT: If a dependency must be compiled with an older version of the compiler, use the `_c3.x.y` suffix to indicate the older version (in combination with `_N`) -->
-
+      "
 
 ### Reproduction
 <!-- EXPLAIN HOW TO REPRODUCE THE ISSUE -->
