@@ -20,20 +20,7 @@ body:
     validations:
       required: false
    
-  - type: checkboxes
-    id: status
-    attributes:
-      label: Which operating systems have you used?
-      description: You may select more than one.
-      options:
-        - label: Reproducible
-          required: true
-        - label: Reproducible without external dependencies 
-        - label: Reproducible with minimal example
-        - label: Identified source source of the issue
-        - label: Identified solution
-        - label: Implemented solution
-        - label: Implemented solution
+
 
   
   - type: textarea
