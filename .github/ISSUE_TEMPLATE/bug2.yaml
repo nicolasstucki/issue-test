@@ -26,7 +26,7 @@ body:
     attributes:
       label: Describe the bug
       description: A clear and concise description of what the bug is.
-      placeholder: "
+      placeholder: |
         <!-- FILE OR FILES -->
         <!-- Include full source with imports -->
         <!-- Keep filename for reproduction -->
@@ -45,37 +45,37 @@ body:
         -->
 
         <!-- BACKWARDS COMPAT: If a dependency must be compiled with an older version of the compiler, use the `_c3.x.y` suffix to indicate the older version (in combination with `_N`) -->
-      "
 
-### Reproduction
-<!-- EXPLAIN HOW TO REPRODUCE THE ISSUE -->
+        ### Reproduction
+        <!-- EXPLAIN HOW TO REPRODUCE THE ISSUE -->
 
-`scalac Test.scala`
+        `scalac Test.scala`
 
-<!-- IF IS A REPL ISSUE -->
-<!-- 
-```scala
-// REPL
-> // Code
-```
--->
+        <!-- IF IS A REPL ISSUE -->
+        <!-- 
+        ```scala
+        // REPL
+        > // Code
+        ```
+        -->
 
-### Output
+        ### Output
 
-```
-// TODO
-```
+        ```
+        // TODO
+        ```
 
-<!-- IF THE OUTPUT CONTAINS A STACK TRACE IS TOO LONG -->
-<!--
-<details>
-<summary>Detailed Output</summary>
+        <!-- IF THE OUTPUT CONTAINS A STACK TRACE IS TOO LONG -->
+        <!--
+        <details>
+        <summary>Detailed Output</summary>
 
-```scala
-// TODO add output here
-```
-</details>
--->
+        ```scala
+        // TODO add output here
+        ```
+        </details>
+        -->
+                
     validations:
       required: true
 
