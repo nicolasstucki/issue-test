@@ -37,14 +37,14 @@ body:
 
   - type: markdown
     attributes:
-      value: |
+      value: "
         - [ ] Reproducible
         - [ ] Reproducible without external dependencies 
         - [ ] Reproducible with minimal example     
         - [ ] Identified source source of the issue
         - [ ] Identified solution
         - [ ] Implemented solution
-      
+        "
   - type: textarea
     id: what-happened
     attributes:
