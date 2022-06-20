@@ -20,21 +20,6 @@ body:
       value: None
     validations:
       required: false
-   
-  - type: checkboxes
-    id: status
-    attributes:
-      label: "Which operating systems have you used?"
-      description: "You may select more than one."
-      options:
-        - label: Reproducible
-          required: true
-        - label: "Reproducible without external dependencies"
-        - label: "Reproducible with minimal example"
-        - label: "Identified source source of the issue"
-        - label: "Identified solution"
-        - label: "Implemented solution"
-
  
   - type: textarea
     id: what-happened
@@ -57,35 +42,20 @@ body:
     attributes:
       label: Expected behavior
       description: A clear and concise description of what you expected to happen.
-
-  - type: dropdown
-    id: os
+   
+  - type: checkboxes
+    id: status
     attributes:
-      label: Operating system
-      description: What OS are you using?
+      label: "Which operating systems have you used?"
+      description: "You may select more than one."
       options:
-        - macOS
-        - Windows
-        - Linux
-        - Other (note only the above 3 are officially supported)
-
-  - type: dropdown
-    id: editor
-    attributes:
-      label: Editor/Extension
-      options:
-        - VS Code
-        - Sublime
-        - Nvim/Vim (coc-metals)
-        - Nvim (nvim-metals)
-        - Nvim/Vim (other)
-        - Emacs (lsp-metals)
-        - Emacs (other)
-        - Other
-        
-
-
-
+        - label: Reproducible
+          required: true
+        - label: "Reproducible without external dependencies"
+        - label: "Reproducible with minimal example"
+        - label: "Identified source source of the issue"
+        - label: "Identified solution"
+        - label: "Implemented solution"
 
   - type: textarea
     id: extra
