@@ -19,7 +19,32 @@ body:
       value: None
     validations:
       required: false
-     
+   
+  - type: checkboxes
+    id: status
+    attributes:
+      label: Which operating systems have you used?
+      description: You may select more than one.
+      options:
+        - label: Reproducible
+          required: true
+        - label: Reproducible without external dependencies 
+        - label: Reproducible with minimal example
+        - label: Identified source source of the issue
+        - label: Identified solution
+        - label: Implemented solution
+        - label: Implemented solution
+
+  - type: markdown
+    attributes:
+      value: |
+        - [ ] Reproducible
+        - [ ] Reproducible without external dependencies 
+        - [ ] Reproducible with minimal example     
+        - [ ] Identified source source of the issue
+        - [ ] Identified solution
+        - [ ] Implemented solution
+      
   - type: textarea
     id: what-happened
     attributes:
@@ -67,16 +92,7 @@ body:
         - Emacs (other)
         - Other
         
-  - type: checkboxes
-    id: operating-systems
-    attributes:
-      label: Which operating systems have you used?
-      description: You may select more than one.
-      options:
-        - label: macOS
-          required: true
-        - label: Windows
-        - label: Linux
+
 
 
 
