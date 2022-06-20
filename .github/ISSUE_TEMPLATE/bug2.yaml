@@ -1,6 +1,25 @@
 name: 🐛 Bug Report 2
 description: Create a bug report to help us improve
 body:
+
+  - type: input
+    id: version
+    attributes:
+      label: Fails in version
+      placeholder: 3.x.y
+      description: "Version of Scala 3. If you're not sure what version you're using, run `print scalaVersion` from sbt (if you're running scalac manually, use `scalac -version` instead)."
+    validations:
+      required: true
+
+  - type: input
+    id: last-good-version
+    attributes:
+      label: Last good version
+      placeholder: 3.x.y / None
+      value: None
+    validations:
+      required: false
+     
   - type: textarea
     id: what-happened
     attributes:
@@ -59,13 +78,7 @@ body:
         - label: Windows
         - label: Linux
 
-  - type: input
-    id: version
-    attributes:
-      label: Version of Metals
-      placeholder: v0.11.6
-    validations:
-      required: true
+
 
   - type: textarea
     id: extra
