@@ -55,6 +55,7 @@ body:
       description: You may select more than one.
       options:
         - label: macOS
+          required: true
         - label: Windows
         - label: Linux
 
