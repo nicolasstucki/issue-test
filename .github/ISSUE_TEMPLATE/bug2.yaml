@@ -24,8 +24,8 @@ body:
   - type: textarea
     id: what-happened
     attributes:
-      label: Describe the bug
-      description: A clear and concise description of what the bug is.
+      label: Bug description
+      description: A clear and concise description of how to reproduce the bug.
       value: |
         ##### Files
         <!-- Include full source with imports -->
@@ -34,7 +34,7 @@ body:
         // TODO: add code
         ```
         
-        <!-- SEPARATE COMPILATION: If a file must be compiled before the other, use the `_N` suffix for the file name.              For exmaple, if we have `Macro_1.sclala` and `Test_2.scala`, it means that we will first compile `Macro_1.sclala` and then compile `Test_2.scala` with a dependency on `Test_2.scala`. `Macro.sclala` and `Test.scala` means that we compile both at the same time (for macros avoid this one unless it is the only way to reproduce the issue). -->
+        <!-- SEPARATE COMPILATION: If a file must be compiled before the other, use the `_N` suffix for the file name. For example, if we have `Macro_1.sclala` and `Test_2.scala`, it means that we will first compile `Macro_1.sclala` and then compile `Test_2.scala` with a dependency on `Test_2.scala`. `Macro.sclala` and `Test.scala` means that we compile both at the same time (for macros avoid this one unless it is the only way to reproduce the issue). -->
         <!-- BACKWARDS COMPAT: If a dependency must be compiled with an older version of the compiler, use the `_c3.x.y` suffix to indicate the older version (in combination with `_N`) -->
         
         #####  Reproduction
