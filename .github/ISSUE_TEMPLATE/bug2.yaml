@@ -35,16 +35,7 @@ body:
         - label: Implemented solution
         - label: Implemented solution
 
-  - type: markdown
-    attributes:
-      value: "
-        - [ ] Reproducible
-        - [ ] Reproducible without external dependencies 
-        - [ ] Reproducible with minimal example     
-        - [ ] Identified source source of the issue
-        - [ ] Identified solution
-        - [ ] Implemented solution
-        "
+  
   - type: textarea
     id: what-happened
     attributes:
