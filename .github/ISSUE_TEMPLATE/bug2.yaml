@@ -46,8 +46,8 @@ body:
   - type: checkboxes
     id: status
     attributes:
-      label: "Which operating systems have you used?"
-      description: "You may select more than one."
+      label: "Status"
+      description: "Select all options that apply"
       options:
         - label: Reproducible
           required: true
