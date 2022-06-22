@@ -17,9 +17,9 @@ body:
     id: last-good-version
     attributes:
       label: Last good version
-      placeholder: 3.x.y / None
+      placeholder: 3.x.y / None / Unknown
       description: Last good version if this bug is a regression. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#last-good-version)
-      value: None
+      value: Unknown
     validations:
       required: true
 

@@ -17,11 +17,172 @@ If you're not sure what version you're using, run `print scalaVersion` from sbt 
 
 Last good version if this bug is a regression.
 
-By default the value is `None` indicating this is not a regression. Otherwise should contain a version formatted as in _Scala 3 version_ section.
+- `Unknown`: default
+- `None`: this is not a regression (it was failing in 3.)
+- `3.x.y`: the last version where this worked in Scala 3 (see format in _Scala 3 version_ section)
+- `2.x.y`: this used to work in Scala 2 but has never worked in Scala 3
 
 ### How to reproduce the bug
 
-TODO
+
+The bug must be reproducible in some way. Depending on the kind of bug, the reproduction might vary.
+Here we include some templates to follow for different kinds of bugs
+
+#### Compilation bug template
+
+<details>
+  <summary>Compilation error using scala-cli</summary>
+
+  ````markdown
+  Using Scala sources:
+  ```scala
+  // Test.scala
+  def test = xyz
+  ```
+  We get a failure when compiling the sources using `scala-cli` without any flags
+  ```
+  > scala-cli compile Test.scala
+  | Error: ...
+  | def f = xyz
+  |         ^^^ some error
+  ```
+  ````
+</details>
+
+<details>
+  <summary>Compilation error using scalac</summary>
+
+  ````markdown
+  Using Scala sources:
+  ```scala
+  // Test.scala
+  def test = xyz
+  ```
+  We get a failure when compiling the sources using `scalac` without any flags
+  ```
+  > scalac Test.scala
+  | Error: ...
+  | def f = xyz
+  |         ^^^ some error
+  ```
+  ````
+</details>
+
+
+<details>
+  <summary>Compilation crash using scala-cli</summary>
+
+  ````markdown
+  Using Scala sources:
+  ```scala
+  // Test.scala
+  def test = xyz
+  ```
+  We get a failure when compiling the sources using `scala-cli` without any flags
+  ```
+  > scala-cli compile Test.scala
+  ```
+
+  <details>
+  <summary>Crash output</summary>
+
+  ```
+  Exception in thread "main" java.lang.Error: ...
+          at ...
+          at ...
+          at Test.main(Test.scala:1)
+  ```
+  </details>
+
+  ````
+</details>
+
+<details>
+  <summary>Compilation crash using scalac</summary>
+
+  ````markdown
+  Using Scala sources:
+  ```scala
+  // Test.scala
+  def test = xyz
+  ```
+  We get a failure when compiling the sources using `scalac` without any flags
+  ```
+  > scalac Test.scala
+  ```
+
+  <details>
+  <summary>Crash output</summary>
+
+  ```
+  Exception in thread "main" java.lang.Error: ...
+          at ...
+          at ...
+          at Test.main(Test.scala:1)
+  ```
+  </details>
+
+  ````
+</details>
+
+
+#### Runtime bug template
+
+<details>
+  <summary>Compile and run using scala-cli</summary>
+
+  ````markdown
+  Using Scala sources:
+  ```scala
+  // Test.scala
+  @main def Test = xyz
+  ```
+  We get a failure when compiling the sources using `scala-cli` without any flags
+  ```
+  > scala-cli Test.scala
+  Exception in thread "main" java.lang.Error: ...
+          at ...
+          at ...
+          at Test.main(Test.scala:1)
+  ```
+  ````
+</details>
+
+<details>
+  <summary>Compile and run using scalac/scala</summary>
+
+  ````markdown
+  Using Scala sources:
+  ```scala
+  // Test.scala
+  @main def Test = xyz
+  ```
+  We get a failure when compiling the sources using `scala-cli` without any flags
+  ```
+  > mkdir out
+  > scalac -d out Test.scala
+  > scala -classpath out Test
+  Exception in thread "main" java.lang.Error: ...
+          at ...
+          at ...
+          at Test.main(Test.scala:1)
+  ```
+  ````
+</details>
+
+#### REPL bug template
+
+<details>
+  <summary>Compile and run using scalac/scala</summary>
+
+  ````markdown
+  Executing the following code in the REPL fails
+  ```
+  scala> def test = xyx
+  // output of the error
+  ````
+</details>
+
 
 ### Expected behavior
 
