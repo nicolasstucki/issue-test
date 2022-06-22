@@ -33,20 +33,6 @@ body:
       value: "## Issue Reproduction"
 
   - type: dropdown
-    id: issue-failure
-    attributes:
-      label: How does it fail?
-      multiple: false
-      # description: [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md)
-      options:
-        - wrong run-time behavior
-        - crashes at run-time
-        - error at compile-time
-        - crashes at compile-time
-    validations:
-      required: true
-
-  - type: dropdown
     id: issue-reproducibility
     attributes:
       label: Level of reproducibility
@@ -82,6 +68,20 @@ body:
       description: |
         A clear and concise description of how to reproduce the bug. [More info and templates](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#how-to-reproduce-the-bug)
       placeholder: Use templates in link above
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-failure
+    attributes:
+      label: How does it fail?
+      multiple: false
+      # description: [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md)
+      options:
+        - wrong run-time behavior
+        - crashes at run-time
+        - error at compile-time
+        - crashes at compile-time
     validations:
       required: true
 
