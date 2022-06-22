@@ -40,6 +40,7 @@ body:
     id: issue-kind
     attributes:
       label: Issue kind
+      multiple: true
       # description: [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md)
       options:
         - Compiles but shouldn't
@@ -47,6 +48,8 @@ body:
         - Crashes at runtime
         - Wrong error/warning
         - Crashes the compiler
+      validation:
+        required: true
 
   - type: textarea
     id: bug-reproduction
