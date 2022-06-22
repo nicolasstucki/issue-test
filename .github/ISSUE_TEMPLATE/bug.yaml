@@ -4,10 +4,14 @@ description: Create a bug report to help us improve
 labels: ["bug"]
 body:
 
+  - type: markdown
+    attributes:
+      value: "## Scala 3 Version"
+
   - type: input
     id: version
     attributes:
-      label: Scala 3 version
+      label: Failing version
       placeholder: 3.x.y
       description: |
         Version or versions of Scala 3 in which the bug is found. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#scala-3-version)
@@ -65,6 +69,19 @@ body:
         - label: Reproducible with minimal example (can start fixing)
 
 
+  - type: markdown
+    attributes:
+      value: "## Expectation"
+
+  - type: textarea
+    id: expectation
+    attributes:
+      label: Expected behavior
+      description: A clear and concise description of what you expected to happen. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#expected-behavior)
+    validations:
+      required: true
+
+
   - type: dropdown
     id: expectations
     attributes:
@@ -75,14 +92,6 @@ body:
         - compile
         - emit an error
         - emit a warning
-    validations:
-      required: true
-
-  - type: textarea
-    id: expectation
-    attributes:
-      label: Expected behavior
-      description: A clear and concise description of what you expected to happen. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#expected-behavior)
     validations:
       required: true
 
