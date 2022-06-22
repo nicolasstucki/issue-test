@@ -9,7 +9,8 @@ body:
       label: Scala 3 version
       placeholder: 3.x.y
       description: |
-        Version or versions of Scala 3 in which the bug is found. If you're not sure what version you're using, run `print scalaVersion` from sbt (if you're running scalac manually, use `scalac -version` instead).
+        Version or versions of Scala 3 in which the bug is found.
+        [How to find the version](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#scala-3-version)
     validations:
       required: true
 
@@ -21,7 +22,7 @@ body:
       description: Last good version if this bug is a regression
       value: None
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: bug-reproduction

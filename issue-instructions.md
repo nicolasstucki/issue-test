@@ -13,7 +13,6 @@ This field may must contain one or more (comma separated) versions of the compil
 
 If you're not sure what version you're using, run `print scalaVersion` from sbt (if you're running scalac manually, use `scalac -version` instead).
 
-
 ### Last good version
 
 Last good version if this bug is a regression.
@@ -22,7 +21,7 @@ By default the value is `None` indicating this is not a regression. Otherwise sh
 
 ### How to reproduce the bug
 
-
+TODO
 
 ### Expected behavior
 
