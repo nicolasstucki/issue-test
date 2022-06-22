@@ -33,7 +33,7 @@ body:
       value: "## Issue Reproduction"
 
   - type: dropdown
-    id: issue-kind
+    id: issue-failure
     attributes:
       label: How does it fail?
       multiple: false
@@ -41,8 +41,37 @@ body:
       options:
         - wrong run-time behavior
         - crashes at run-time
-        - error/warning at compile-time
+        - error at compile-time
         - crashes at compile-time
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-reproducibility
+    attributes:
+      label: Level of reproducibility
+      multiple: false
+      # description: [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md)
+      options:
+        - Reproducible with scalac/scala
+        - Reproducible with scala-cli
+        - Reproducible with scastie
+        - Reproducible in external repo
+        - Unreproducible
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-minimization
+    attributes:
+      label: Level of minimization
+      multiple: false
+      # description: [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md)
+      options:
+        - well minimized snippet
+        - self-contained snippet
+        - self-contained repo
+        - repo with external dependencies
     validations:
       required: true
 
