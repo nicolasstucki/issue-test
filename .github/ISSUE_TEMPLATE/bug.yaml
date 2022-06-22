@@ -36,6 +36,18 @@ body:
         - label: "Reproducible with self-contained example"
         - label: "Reproducible with minimal example (can start fixing)"
 
+  - type: dropdown
+    id: issue-kind
+    attributes:
+      label: Issue kind
+      # description: [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md)
+      options:
+        - Compiles but shouldn't
+        - Wrong runtime results
+        - Crashes at runtime
+        - Wrong error/warning
+        - Crashes the compiler
+
   - type: textarea
     id: bug-reproduction
     attributes:
