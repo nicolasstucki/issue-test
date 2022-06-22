@@ -17,10 +17,10 @@ If you're not sure what version you're using, run `print scalaVersion` from sbt 
 
 Last good version if this bug is a regression.
 
-- `Unknown`: default
-- `None`: this is not a regression (it was failing in 3.)
+- Empty: this issue is not known to have worked in the past
 - `3.x.y`: the last version where this worked in Scala 3 (see format in _Scala 3 version_ section)
-- `2.x.y`: this used to work in Scala 2 but has never worked in Scala 3
+- `2.x.y`: this used to work in Scala 2 but has never worked in Scala 3 (possibly by design)
+- `None`: this is not a regression. It was failing since 3.0.0.
 
 ## How to reproduce the bug
 

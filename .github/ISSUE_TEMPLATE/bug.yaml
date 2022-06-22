@@ -17,16 +17,16 @@ body:
     id: last-good-version
     attributes:
       label: Last good version
-      placeholder: 3.x.y / None / Unknown
-      description: Last good version if this bug is a regression. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#last-good-version)
-      value: Unknown
+      placeholder: 3.x.y / 2.x.y / None
+      description: |
+        Last good version if this bug is a regression. Leave empty if not known. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#last-good-version)
     validations:
       required: false
 
   - type: checkboxes
     id: status
     attributes:
-      label: Minimization
+      label: Ease of reproduction
       description: Select all options that apply. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#ease-of-reproduction)
       options:
         - label: Reproducible
