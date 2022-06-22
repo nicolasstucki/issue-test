@@ -9,8 +9,7 @@ body:
       label: Scala 3 version
       placeholder: 3.x.y
       description: |
-        Version or versions of Scala 3 in which the bug is found.
-        [How to find the version](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#scala-3-version)
+        Version or versions of Scala 3 in which the bug is found. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#scala-3-version)
     validations:
       required: true
 
@@ -19,7 +18,7 @@ body:
     attributes:
       label: Last good version
       placeholder: 3.x.y / None
-      description: Last good version if this bug is a regression
+      description: Last good version if this bug is a regression. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#last-good-version)
       value: None
     validations:
       required: false
@@ -29,7 +28,7 @@ body:
     attributes:
       label: How to reproduce the bug
       description: |
-        A clear and concise description of how to reproduce the bug.
+        A clear and concise description of how to reproduce the bug. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#how-to-reproduce-the-bug)
       placeholder: |
         ```scala
         // Test.scala
@@ -50,22 +49,21 @@ body:
     id: expectation
     attributes:
       label: Expected behavior
-      description: A clear and concise description of what you expected to happen.
+      description: A clear and concise description of what you expected to happen. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#expected-behavior)
     validations:
       required: true
 
   - type: checkboxes
     id: status
     attributes:
-      label: "Minimization"
-      description: "Select all options that apply."
+      label: Minimization
+      description: Select all options that apply. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#ease-of-reproduction)
       options:
         - label: Reproducible
           required: true
         - label: "Reproducible without external dependencies"
         - label: "Reproducible with self-contained example"
         - label: "Reproducible with minimal example (can start fixing)"
-
 
   - type: textarea
     id: extra
