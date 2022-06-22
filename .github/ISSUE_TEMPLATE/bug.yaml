@@ -30,9 +30,7 @@ body:
 
   - type: markdown
     attributes:
-      value: |
-        <br/>
-        ## Issue Reproduction
+      value: "## Issue Reproduction"
 
   - type: dropdown
     id: issue-reproducibility
