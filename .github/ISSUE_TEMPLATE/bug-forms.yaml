@@ -1,0 +1,73 @@
+name: 🐛 Bug Report Forms
+description: Create a bug report to help us improve
+labels: ["itype:bug", "stat:needs triage"]
+body:
+
+  - type: input
+    id: version
+    attributes:
+      label: Fails in version
+      placeholder: 3.x.y
+      description: "Version of Scala 3. If you're not sure what version you're using, run `print scalaVersion` from sbt (if you're running scalac manually, use `scalac -version` instead)."
+    validations:
+      required: true
+
+  - type: input
+    id: last-good-version
+    attributes:
+      label: Last good version
+      placeholder: 3.x.y / None
+      value: None
+    validations:
+      required: false
+
+  - type: textarea
+    id: bug-reproduction
+    attributes:
+      label: How to reproduce the bug
+      description: |
+        A clear and concise description of how to reproduce the bug.
+      placeholder: |
+        ```scala
+        // Test.scala
+        def test = xyz
+        ```
+
+        ```
+        > scalac Test.scala
+        | Error: ...
+        | def test = xyz
+        | //         ^^^ some error
+        ```
+
+    validations:
+      required: true
+
+  - type: textarea
+    id: expectation
+    attributes:
+      label: Expected behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: status
+    attributes:
+      label: "Status"
+      description: "Select all options that apply"
+      options:
+        - label: Reproducible
+          required: true
+        - label: "Reproducible without external dependencies"
+        - label: "Reproducible with minimal self-contained example"
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Extra context or search terms
+      description: |
+        - Any other context about the problem
+        - Search terms to help others discover this
+    validations:
+      required: false
