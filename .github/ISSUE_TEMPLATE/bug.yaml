@@ -53,11 +53,11 @@ body:
       multiple: false
       # description: [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md)
       options:
-        - Reproducible with scalac/scala
-        - Reproducible with scala-cli
-        - Reproducible with scastie
-        - Reproducible in external repo
-        - Unreproducible
+        - with scalac/scala
+        - with scala-cli
+        - with scastie
+        - with external repo
+        - unreproducible
     validations:
       required: true
 
@@ -84,19 +84,6 @@ body:
       placeholder: Use templates in link above
     validations:
       required: true
-
-  - type: checkboxes
-    id: status
-    attributes:
-      label: Ease of reproduction
-      description: Select all options that apply. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#ease-of-reproduction)
-      options:
-        - label: Reproducible
-          required: true
-        - label: Reproducible without external dependencies
-        - label: Reproducible with self-contained example
-        - label: Reproducible with minimal example (can start fixing)
-
 
   - type: markdown
     attributes:
