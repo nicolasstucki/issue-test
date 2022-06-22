@@ -4,10 +4,6 @@ description: Create a bug report to help us improve
 labels: ["bug"]
 body:
 
-  - type: markdown
-    attributes:
-      value: "## Version"
-
   - type: input
     id: version
     attributes:
@@ -30,32 +26,19 @@ body:
 
   - type: markdown
     attributes:
-      value: "## Reproduction"
-
-  - type: checkboxes
-    id: status
-    attributes:
-      label: Ease of reproduction
-      description: Select all options that apply. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#ease-of-reproduction)
-      options:
-        - label: Reproducible
-          required: true
-        - label: "Reproducible without external dependencies"
-        - label: "Reproducible with self-contained example"
-        - label: "Reproducible with minimal example (can start fixing)"
-
+      value: "## Issue Reproduction"
 
   - type: dropdown
     id: issue-kind
     attributes:
-      label: Failure
+      label: How does it fail?
       multiple: false
       # description: [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md)
       options:
-        - Wrong run-time behavior
-        - Error/warning
-        - Crashes at run-time
-        - Crashes at compile-time
+        - wrong run-time behavior
+        - crashes at run-time
+        - error/warning at compile-time
+        - crashes at compile-time
     validations:
       required: true
 
@@ -69,23 +52,31 @@ body:
     validations:
       required: true
 
-  - type: markdown
+  - type: checkboxes
+    id: status
     attributes:
-      value: "## Expected behavior"
+      label: Ease of reproduction
+      description: Select all options that apply. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#ease-of-reproduction)
+      options:
+        - label: Reproducible
+          required: true
+        - label: Reproducible without external dependencies
+        - label: Reproducible with self-contained example
+        - label: Reproducible with minimal example (can start fixing)
+
 
   - type: dropdown
     id: expectations
     attributes:
-      label: Expected behavior
+      label: It should
       multiple: true
       # description: [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md)
       options:
-        - Should compile
-        - Should fail compilation
-        - Should compile with a warning
+        - compile
+        - emit an error
+        - emit a warning
     validations:
       required: true
-
 
   - type: textarea
     id: expectation
