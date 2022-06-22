@@ -1,7 +1,7 @@
-## Opening an issue
+# Opening an issue
 
 
-### Scala 3 version
+## Scala 3 version
 
 The version of Scala 3 in which the bug is found.
 
@@ -13,7 +13,7 @@ This field may must contain one or more (comma separated) versions of the compil
 
 If you're not sure what version you're using, run `print scalaVersion` from sbt (if you're running scalac manually, use `scalac -version` instead).
 
-### Last good version
+## Last good version
 
 Last good version if this bug is a regression.
 
@@ -22,13 +22,13 @@ Last good version if this bug is a regression.
 - `3.x.y`: the last version where this worked in Scala 3 (see format in _Scala 3 version_ section)
 - `2.x.y`: this used to work in Scala 2 but has never worked in Scala 3
 
-### How to reproduce the bug
+## How to reproduce the bug
 
 
 The bug must be reproducible in some way. Depending on the kind of bug, the reproduction might vary.
 Here we include some templates to follow for different kinds of bugs
 
-#### Compilation bug template
+### Compilation bug template
 
 <details>
   <summary>Compilation error using scala-cli</summary>
@@ -126,7 +126,7 @@ Here we include some templates to follow for different kinds of bugs
 </details>
 
 
-#### Runtime bug template
+### Runtime bug template
 
 <details>
   <summary>Compile and run using scala-cli</summary>
@@ -170,7 +170,7 @@ Here we include some templates to follow for different kinds of bugs
   ````
 </details>
 
-#### REPL bug template
+### REPL bug template
 
 <details>
   <summary>Compile and run using scalac/scala</summary>
@@ -184,7 +184,7 @@ Here we include some templates to follow for different kinds of bugs
 </details>
 
 
-### Expected behavior
+## Expected behavior
 
 Describe the expected behavior. For example:
 
@@ -193,7 +193,7 @@ Describe the expected behavior. For example:
 - It should emit an error (or warning) at ... stating that ...
 - It should compile faster ...
 
-### Ease of reproduction
+## Ease of reproduction
 
 Select all options that apply.
 
@@ -217,7 +217,7 @@ Select all options that apply.
   - Trying to remove macros
 
 
-### Fixing the issue
+## Fixing the issue
 
 One should not try to modify the code of the compile or library before understanding the source of the issue and how it can be fixed. The usual steps to follow are:
 
