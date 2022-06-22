@@ -101,11 +101,11 @@ body:
   - type: dropdown
     id: expectations
     attributes:
-      label: It should
+      label: The compiler should
       multiple: true
       # description: [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md)
       options:
-        - compile
+        - succeed compilation
         - emit an error
         - emit a warning
     validations:
