@@ -23,6 +23,18 @@ body:
     validations:
       required: true
 
+  - type: checkboxes
+    id: status
+    attributes:
+      label: Minimization
+      description: Select all options that apply. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#ease-of-reproduction)
+      options:
+        - label: Reproducible
+          required: true
+        - label: "Reproducible without external dependencies"
+        - label: "Reproducible with self-contained example"
+        - label: "Reproducible with minimal example (can start fixing)"
+
   - type: textarea
     id: bug-reproduction
     attributes:
@@ -57,18 +69,6 @@ body:
         - It should compile faster ...
     validations:
       required: true
-
-  - type: checkboxes
-    id: status
-    attributes:
-      label: Minimization
-      description: Select all options that apply. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#ease-of-reproduction)
-      options:
-        - label: Reproducible
-          required: true
-        - label: "Reproducible without external dependencies"
-        - label: "Reproducible with self-contained example"
-        - label: "Reproducible with minimal example (can start fixing)"
 
   - type: textarea
     id: extra
