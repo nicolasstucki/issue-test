@@ -28,7 +28,7 @@ body:
     attributes:
       label: How to reproduce the bug
       description: |
-        A clear and concise description of how to reproduce the bug. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#how-to-reproduce-the-bug)
+        A clear and concise description of how to reproduce the bug. [More info and templates](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#how-to-reproduce-the-bug)
       placeholder: |
         ```scala
         // Test.scala
