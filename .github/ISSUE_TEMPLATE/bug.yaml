@@ -48,8 +48,8 @@ body:
         - Crashes at runtime
         - Wrong error/warning
         - Crashes the compiler
-      validation:
-        required: true
+    validations:
+      required: true
 
   - type: textarea
     id: bug-reproduction
