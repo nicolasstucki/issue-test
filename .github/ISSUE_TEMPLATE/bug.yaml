@@ -4,6 +4,10 @@ description: Create a bug report to help us improve
 labels: ["bug"]
 body:
 
+  - type: markdown
+    attributes:
+      value: "## Version"
+
   - type: input
     id: version
     attributes:
@@ -24,6 +28,10 @@ body:
     validations:
       required: false
 
+  - type: markdown
+    attributes:
+      value: "## Reproduction"
+
   - type: checkboxes
     id: status
     attributes:
@@ -36,18 +44,18 @@ body:
         - label: "Reproducible with self-contained example"
         - label: "Reproducible with minimal example (can start fixing)"
 
+
   - type: dropdown
     id: issue-kind
     attributes:
-      label: Issue kind
-      multiple: true
+      label: Failure
+      multiple: false
       # description: [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md)
       options:
-        - Compiles but shouldn't
-        - Wrong runtime results
-        - Crashes at runtime
-        - Wrong error/warning
-        - Crashes the compiler
+        - Wrong run-time behavior
+        - Error/warning
+        - Crashes at run-time
+        - Crashes at compile-time
     validations:
       required: true
 
@@ -60,6 +68,24 @@ body:
       placeholder: Use templates in link above
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: "## Expected behavior"
+
+  - type: dropdown
+    id: issue-kind
+    attributes:
+      label: Expected behavior
+      multiple: true
+      # description: [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md)
+      options:
+        - Should compile
+        - Should fail compilation
+        - Should compile with a warning
+    validations:
+      required: true
+
 
   - type: textarea
     id: expectation
