@@ -21,7 +21,7 @@ body:
       description: Last good version if this bug is a regression. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#last-good-version)
       value: Unknown
     validations:
-      required: true
+      required: false
 
   - type: checkboxes
     id: status
