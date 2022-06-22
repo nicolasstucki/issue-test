@@ -41,19 +41,7 @@ body:
       label: How to reproduce the bug
       description: |
         A clear and concise description of how to reproduce the bug. [More info and templates](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#how-to-reproduce-the-bug)
-      placeholder: |
-        ```scala
-        // Test.scala
-        def test = xyz
-        ```
-
-        ```
-        > scalac Test.scala
-        | Error: ...
-        | def test = xyz
-        | //         ^^^ some error
-        ```
-
+      placeholder: Use templates in link above
     validations:
       required: true
 
@@ -62,11 +50,6 @@ body:
     attributes:
       label: Expected behavior
       description: A clear and concise description of what you expected to happen. [More info](https://github.com/nicolasstucki/issue-test/blob/main/issue-instructions.md#expected-behavior)
-      placeholder: |
-        - It should compile and produce code equivalent to ...
-        - The generated code should run and produce ...
-        - It should emit an error (or warning) at ... stating that ...
-        - It should compile faster ...
     validations:
       required: true
 
